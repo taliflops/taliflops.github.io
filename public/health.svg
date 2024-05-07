@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 209.1 42.4">
+  <defs>
+    <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="3"/>
+      <feGaussianBlur result="blur" stdDeviation="10"/>
+      <feFlood flood-color="#000" flood-opacity="1"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g style="filter: url(#drop-shadow-1); opacity: .3;">
+    <g style="opacity: .9;">
+      <polygon points="143.4 15.3 37.3 15.3 37.3 27.1 143.4 27.1 191.9 27.1 191.9 15.3 143.4 15.3" style="fill: #fff; stroke-width: 0px;"/>
+    </g>
+    <polygon points="24.7 15.3 21.4 15.3 21.4 19.6 17.2 19.6 17.2 22.8 21.4 22.8 21.4 27.1 24.7 27.1 24.7 22.8 28.9 22.8 28.9 19.6 24.7 19.6 24.7 15.3" style="fill: #fff; stroke-width: 0px;"/>
+  </g>
+  <g>
+    <rect x="37.3" y="15.3" width="111" height="11.7" style="fill: #0fadc0; stroke-width: 0px;"/>
+    <g>
+      <rect x="21.4" y="15.3" width="3.3" height="11.7" style="fill: #0fadc0; stroke-width: 0px;"/>
+      <rect x="21.4" y="15.3" width="3.3" height="11.7" transform="translate(1.9 44.2) rotate(-90)" style="fill: #0fadc0; stroke-width: 0px;"/>
+    </g>
+  </g>
+</svg>

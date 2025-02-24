@@ -1,0 +1,53 @@
+.light {
+  --accent: rgb(52, 89, 76);
+  --highlight: rgb(68, 205, 212);
+  --font-size: 16px;
+  --fast: all 0.2s ease;
+  --medium: all 0.3s ease;
+  --background: rgb(234, 234, 234);
+  --foreground: rgb(0, 0, 0);
+  --text_shadow: 0 0 1.5rem white;
+  --gradient: linear-gradient(135deg, rgb(224, 224, 224), rgb(255, 255, 255));
+  --shadow: 1.4rem 1.4rem 4rem rgba(0, 0, 0, 0.1);
+  --bg: radial-gradient(
+    at 20% 20%,
+    rgba(68, 205, 212, 0.6),
+    var(--background) 30%
+  );
+  background: var(--bg);
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
+  background-size: 110% 110%;
+  width: 100vw;
+  height: 100vh;
+  & body {
+    margin: 0;
+  }
+}
+
+.dark {
+  --accent: rgb(52, 89, 76);
+  --highlight: rgb(68, 205, 212);
+  --font-size: 16px;
+  --fast: all 0.2s ease;
+  --medium: all 0.3s ease;
+  --background: rgb(38, 41, 48);
+  --foreground: rgb(255, 255, 255);
+  --font-size: 16px;
+  --fast: all 0.2s ease;
+  --medium: all 0.3s ease;
+  --text_shadow: 0 0 1.5rem black;
+  --gradient: linear-gradient(135deg, rgb(33, 33, 33), rgb(51, 51, 51));
+  --shadow: 1.4rem 1.4rem 4rem rgba(0, 0, 0, 0.4);
+  --bg: radial-gradient(at 20% 20%, var(--accent), var(--background) 25%),
+    var(--background);
+  background: var(--bg);
+  background-blend-mode: screen;
+  background-repeat: no-repeat;
+  background-size: 110% 110%;
+  width: 100vw;
+  height: 100vh;
+  & body {
+    margin: 0;
+  }
+}

@@ -1,0 +1,52 @@
+.container {
+  color: var(--foreground);
+  margin: 0;
+  font-size: var(--font-size);
+  width: 100vw;
+  transition: var(--fast);
+  height: auto;
+  overflow: hidden;
+}
+
+.toggleMode {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.4rem;
+  border-radius: 2rem;
+  transition: var(--fast);
+  transform: rotate(90deg);
+  margin: auto 0 auto auto;
+
+  &:active {
+  }
+
+  &:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.3));
+    transition: var(--fast);
+    transform: rotate(-270deg);
+  }
+
+  &:active {
+    transition: var(--fast);
+    transform: rotate(-180deg);
+    background: radial-gradient(var(--background), transparent 70%);
+  }
+
+  & svg {
+    position: fixed;
+
+    & path {
+      color: var(--foreground);
+      fill: var(--foreground);
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

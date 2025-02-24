@@ -1,0 +1,77 @@
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+}
+
+.hidden {
+  @extend .overlay;
+  background-color: rgba(0, 0, 0, 0);
+  position: fixed;
+  width: 0;
+  height: 0;
+  transition: var(--fast);
+  opacity: 0;
+}
+
+.modal {
+  background: var(--gradient);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(100%, 70rem);
+  height: min(100%, 50rem);
+  border-radius: 6rem;
+  transition: var(--fast);
+  opacity: 1;
+}
+
+.hiddenModal {
+  @extend .modal;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.image {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6rem;
+  -webkit-mask-image: radial-gradient(
+    ellipse at 10% 10%,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0) 40%
+  );
+  mask-image: radial-gradient(
+    ellipse at 10% 10%,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0) 40%
+  );
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem 4rem;
+  color: var(--foreground);
+  & h2 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  & p {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+}

@@ -1,0 +1,56 @@
+.card {
+  width: 16rem;
+  height: 20rem;
+  background: var(--gradient);
+  border-radius: 5rem;
+  box-shadow: var(--shadow);
+  transition: var(--fast);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+  &:hover {
+    opacity: 1;
+    transition: var(--medium);
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+  &:active {
+    transition: var(--fast);
+    transform: scale(1);
+    filter: brightness(0.9);
+  }
+}
+
+.stack {
+  @extend .card;
+}
+
+.image {
+  height: 50%;
+  width: auto;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.text {
+  text-align: center;
+  text-shadow: var(--text_shadow);
+}
+
+.title {
+  margin: 0 2rem 0.5rem;
+  @extend .text;
+  font-weight: 500;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.subtitle {
+  margin: 0 2rem;
+  @extend .text;
+  font-weight: 400;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}

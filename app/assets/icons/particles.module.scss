@@ -1,0 +1,241 @@
+// @use "variables.module.scss" as *;
+// @forward "animations";
+
+// .wrap {
+//   width: 35px;
+//   position: relative;
+//   margin-left: -65px;
+// }
+
+// .particle,
+// .hide,
+// .wrap .slice {
+//   transition: all 0.6s ease;
+//   opacity: 1;
+// }
+
+// .hide {
+//   opacity: 0;
+// }
+
+// .container,
+// .container_loading {
+//   --uib-size: 35px;
+//   --uib-color: $foreground;
+//   height: var(--uib-size);
+//   width: var(--uib-size);
+//   transition: all 2s ease 1.5s;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   position: relative;
+// }
+// .container {
+//   --uib-speed: 3s;
+
+//   &_loading {
+//     --uib-speed: 1.5s;
+//     animation: rotate calc(var(--uib-speed) * 4) linear infinite;
+//   }
+// }
+
+// .particle {
+//   position: absolute;
+//   top: 0%;
+//   left: 0;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   height: 100%;
+//   width: 100%;
+
+//   &:nth-child(1) {
+//     --uib-delay: 0;
+//     transform: rotate(8deg);
+//   }
+//   &:nth-child(2) {
+//     --uib-delay: -0.4;
+//     transform: rotate(36deg);
+//   }
+
+//   &:nth-child(3) {
+//     --uib-delay: -0.9;
+//     transform: rotate(72deg);
+//   }
+//   &:nth-child(4) {
+//     --uib-delay: -0.5;
+//     transform: rotate(90deg);
+//   }
+//   &:nth-child(5) {
+//     --uib-delay: -0.3;
+//     transform: rotate(144deg);
+//   }
+//   &:nth-child(6) {
+//     --uib-delay: -0.2;
+//     transform: rotate(180deg);
+//   }
+//   &:nth-child(7) {
+//     --uib-delay: -0.6;
+//     transform: rotate(216deg);
+//   }
+//   &:nth-child(8) {
+//     --uib-delay: -0.7;
+//     transform: rotate(252deg);
+//   }
+//   &:nth-child(9) {
+//     --uib-delay: -0.1;
+//     transform: rotate(300deg);
+//   }
+//   &:nth-child(10) {
+//     --uib-delay: -0.8;
+//     transform: rotate(324deg);
+//   }
+//   &:nth-child(11) {
+//     --uib-delay: -1.2;
+//     transform: rotate(335deg);
+//   }
+//   &:nth-child(12) {
+//     --uib-delay: -0.5;
+//     transform: rotate(290deg);
+//   }
+//   &:nth-child(13) {
+//     --uib-delay: -0.2;
+//     transform: rotate(240deg);
+//   }
+// }
+
+// .particle::before {
+//   content: "";
+//   position: absolute;
+//   height: 17.5%;
+//   width: 17.5%;
+//   border-radius: 50%;
+//   background-color: var(--uib-color);
+//   flex-shrink: 0;
+//   transition: background-color 0.3s ease;
+//   --uib-d: calc(var(--uib-delay) * var(--uib-speed));
+//   animation: orbit var(--uib-speed) linear var(--uib-d) infinite;
+// }
+
+// .slice {
+//   position: relative;
+//   height: calc(var(--uib-size) / 6);
+//   width: 100%;
+// }
+
+// .slice::before,
+// .slice::after {
+//   --uib-a: calc(var(--uib-speed) / -2);
+//   --uib-b: calc(var(--uib-speed) / -6);
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   left: calc(50% - var(--uib-size) / 12);
+//   height: 100%;
+//   width: calc(100% / 6);
+//   border-radius: 50%;
+//   background-color: var(--uib-color);
+//   flex-shrink: 0;
+//   animation: DNAorbit var(--uib-speed) linear infinite;
+//   transition: background-color 0.3s ease;
+// }
+
+// .slice:nth-child(1)::after {
+//   animation-delay: var(--uib-a);
+// }
+
+// .slice:nth-child(2)::before {
+//   animation-delay: var(--uib-b);
+// }
+
+// .slice:nth-child(2)::after {
+//   animation-delay: calc(var(--uib-a) + var(--uib-b));
+// }
+
+// .slice:nth-child(3)::before {
+//   animation-delay: calc(var(--uib-b) * 2);
+// }
+// .slice:nth-child(3)::after {
+//   animation-delay: calc(var(--uib-a) + var(--uib-b) * 2);
+// }
+
+// .slice:nth-child(4)::before {
+//   animation-delay: calc(var(--uib-b) * 3);
+// }
+// .slice:nth-child(4)::after {
+//   animation-delay: calc(var(--uib-a) + var(--uib-b) * 3);
+// }
+
+// .slice:nth-child(5)::before {
+//   animation-delay: calc(var(--uib-b) * 4);
+// }
+// .slice:nth-child(5)::after {
+//   animation-delay: calc(var(--uib-a) + var(--uib-b) * 4);
+// }
+
+// .slice:nth-child(6)::before {
+//   animation-delay: calc(var(--uib-b) * 5);
+// }
+// .slice:nth-child(6)::after {
+//   animation-delay: calc(var(--uib-a) + var(--uib-b) * 5);
+// }
+
+// .containerLoading {
+//   --uib-size: 40px;
+//   --uib-color: var(--foreground);
+//   --uib-speed: 1.5s;
+//   --dot-size: calc(var(--uib-size) * 0.17);
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   justify-content: flex-start;
+//   height: var(--uib-size);
+//   width: var(--uib-size);
+//   animation: smoothRotate calc(var(--uib-speed) * 1.8) linear infinite;
+// }
+
+// .dot {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   display: flex;
+//   align-items: flex-start;
+//   justify-content: center;
+//   height: 100%;
+//   width: 100%;
+//   animation: rotate var(--uib-speed) ease-in-out infinite;
+// }
+
+// .dot::before {
+//   content: "";
+//   height: var(--dot-size);
+//   width: var(--dot-size);
+//   border-radius: 50%;
+//   background-color: var(--uib-color);
+//   transition: background-color 0.3s ease;
+// }
+
+// .dot:nth-child(2),
+// .dot:nth-child(2)::before {
+//   animation-delay: calc(var(--uib-speed) * -0.835 * 0.5);
+// }
+
+// .dot:nth-child(3),
+// .dot:nth-child(3)::before {
+//   animation-delay: calc(var(--uib-speed) * -0.668 * 0.5);
+// }
+
+// .dot:nth-child(4),
+// .dot:nth-child(4)::before {
+//   animation-delay: calc(var(--uib-speed) * -0.501 * 0.5);
+// }
+
+// .dot:nth-child(5),
+// .dot:nth-child(5)::before {
+//   animation-delay: calc(var(--uib-speed) * -0.334 * 0.5);
+// }
+
+// .dot:nth-child(6),
+// .dot:nth-child(6)::before {
+//   animation-delay: calc(var(--uib-speed) * -0.167 * 0.5);
+// }

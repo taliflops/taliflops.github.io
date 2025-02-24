@@ -1,0 +1,41 @@
+.container {
+  width: min(100%, 70rem);
+  margin: 5rem auto;
+  @media screen and (min-width: 768px) {
+    padding: 0 4rem;
+  }
+}
+
+.text {
+  margin: 0;
+  text-align: center;
+  text-shadow: var(--text_shadow);
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.title {
+  @extend .text;
+  color: var(--foreground);
+  font-weight: 300;
+  opacity: 0.4;
+  font-size: 3.5rem;
+  @media screen and (min-width: 768px) {
+    font-size: 4.5rem;
+  }
+}
+
+.subtitle {
+  @extend .text;
+  color: var(--foreground);
+  font-weight: 400;
+  opacity: 0.6;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  margin-left: 0.4rem;
+  @media screen and (min-width: 768px) {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+}

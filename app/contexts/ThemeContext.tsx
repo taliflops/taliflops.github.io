@@ -73,6 +73,10 @@ const ThemeProvider = ({ children }: { children: ReactNode }) => {
       >
         <head>
           <title>SkillHabit</title>
+          <meta
+            name="description"
+            content="Let's see how this rolls."
+          ></meta>
         </head>
         <body>
           <Toggle>{children}</Toggle>

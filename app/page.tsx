@@ -1,3 +1,5 @@
 import DefaultContainer from "./containers/DefaultContainer";
 
-export default () => <DefaultContainer />;
+const Page = () => <DefaultContainer />;
+
+export default Page;

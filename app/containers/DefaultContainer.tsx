@@ -39,7 +39,7 @@ const imgs = [
   img8,
 ];
 
-export default ({ slug }: { slug?: string }) => {
+const DefaultContainer = ({ slug }: { slug?: string }) => {
   const [isModalOpen, showModal] = useState<null | CardContent>(null);
   console.log(slug);
   return (
@@ -73,3 +73,5 @@ export default ({ slug }: { slug?: string }) => {
     </>
   );
 };
+
+export default DefaultContainer;

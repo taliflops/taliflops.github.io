@@ -6,7 +6,7 @@ const geist = Geist({
   display: "swap",
 });
 
-export default ({
+const Welcome = ({
   subtitle = "What shall we learn today?",
 }: {
   subtitle?: string;
@@ -16,3 +16,5 @@ export default ({
     <p className={`${geist.className} ${styles.subtitle}`}>{subtitle}</p>
   </div>
 );
+
+export default Welcome;

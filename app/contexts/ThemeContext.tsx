@@ -1,6 +1,6 @@
 "use client";
 
-import ToggleScreenMode from "@/components/ToggleScreenMode";
+import Toggle from "@/components/ToggleScreenMode";
 import {
   type ReactNode,
   createContext,
@@ -8,7 +8,6 @@ import {
   useEffect,
   useState,
 } from "react";
-import { Geist } from "next/font/google";
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({
@@ -72,9 +71,11 @@ const ThemeProvider = ({ children }: { children: ReactNode }) => {
         lang="en"
         className={`${montserrat.className} ${theme}`}
       >
-        <head />
+        <head>
+          <title>SkillHabit</title>
+        </head>
         <body>
-          <ToggleScreenMode>{children}</ToggleScreenMode>
+          <Toggle>{children}</Toggle>
         </body>
       </html>
     </ThemeProviderContext.Provider>

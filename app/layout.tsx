@@ -7,7 +7,7 @@ import { MenuProvider } from "./contexts/MenuContext";
 import styles from "styles/menu.module.scss";
 import "styles/globals.scss";
 
-export default ({ children }: { children: ReactNode }) => {
+const Layout = ({ children }: { children: ReactNode }) => {
   const [isOpen, setOpen] = useState(false);
 
   return (
@@ -27,3 +27,5 @@ export default ({ children }: { children: ReactNode }) => {
     </ThemeProvider>
   );
 };
+
+export default Layout;

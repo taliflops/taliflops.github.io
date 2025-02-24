@@ -1,7 +1,7 @@
 import styles from "styles/card.module.scss";
 import Image, { StaticImageData } from "next/image";
 
-export default ({
+const Card = ({
   title,
   subtitle,
   image,
@@ -27,3 +27,5 @@ export default ({
     <p className={styles.subtitle}>{subtitle}</p>
   </div>
 );
+
+export default Card;

@@ -5,7 +5,7 @@ import { Theme, useTheme } from "contexts/ThemeContext";
 import styles from "styles/toggle-screen-mode.module.scss";
 import { ReactNode } from "react";
 
-export default ({ children }: { children: ReactNode }) => {
+const Toggle = ({ children }: { children: ReactNode }) => {
   const { theme, setTheme } = useTheme();
 
   return (
@@ -23,3 +23,5 @@ export default ({ children }: { children: ReactNode }) => {
     </div>
   );
 };
+
+export default Toggle;

@@ -2,7 +2,7 @@ import styles from "styles/modal.module.scss";
 import Image from "next/image";
 import { ModalContent } from "@/Types";
 
-export default ({ closeModal, title, subtitle, image }: ModalContent) => (
+const Modal = ({ closeModal, title, subtitle, image }: ModalContent) => (
   <>
     <div
       className={title ? styles.overlay : styles.hidden}
@@ -27,3 +27,5 @@ export default ({ closeModal, title, subtitle, image }: ModalContent) => (
     </div>
   </>
 );
+
+export default Modal;

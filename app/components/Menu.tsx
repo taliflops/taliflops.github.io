@@ -1,14 +1,14 @@
 "use client";
 
 import { MenuOption } from "Types";
-import { Menu } from "assets/icons";
+import { Menu as MenuIcon } from "assets/icons";
 import styles from "assets/styles/menu.module.scss";
 import { EventHandler, MouseEvent } from "react";
 import { usePathname } from "next/navigation";
 import { menuOptionsList } from "contexts/MenuContext";
 import Link from "next/link";
 
-export default ({
+const Menu = ({
   isOpen,
   setOpen,
 }: {
@@ -42,7 +42,7 @@ export default ({
         onClick={(e: MouseEvent) => handleClick(e)}
         className={isOpen ? styles.activeTrigger : styles.trigger}
       >
-        <Menu />
+        <MenuIcon />
         <Link
           className={isOpen ? styles.brand : styles.hiddenBrand}
           href="/"
@@ -53,3 +53,5 @@ export default ({
     </div>
   );
 };
+
+export default Menu;
